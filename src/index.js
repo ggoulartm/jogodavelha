@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-/* eslint-disable eqeqeq */
 import React, { useState } from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";
 import useStateInCustomProperties from "https://cdn.skypack.dev/use-state-in-custom-properties";
@@ -77,53 +75,43 @@ const App = () => {
 
         let retornar = [];
         if (jogadas > 0) {
-            retornar = [ < h3 class = "is-size-4" > Historico: < /h3>]
+            retornar = [ <h3 class = "is-size-4" > Historico: </h3>]
                 for (var j = 0; j < jogadas; j++) {
                     let jogo = j;
-                    retornar = [retornar, < button onClick = {
+                    retornar = [retornar, <button onClick = {
                         () => retornar_jogada(jogadas, jogo, historia)
-                    } > Retornar jogada# { j } < /button>, <br></br > ]
+                    } > Retornar jogada# { j } </button>, <br></br> ]
                 }
             }
 
             for (var i = 0; i < 3; i++) {
                 for (var j = 0; j < 3; j++) {
                     let n = 3 * i + j
-                    array = [array, < button class = "button"
+                    array = [array, <button class = "button"
                         onClick = {
                             () => botao(n)
-                        } > { board[n] } < /button>];
+                        } > { board[n] } </button>];
                     }
-                    array = [array, < br > < /br>]}
+                    array = [array, <br> </br>]}
 
                         if (!vencedor(board)) {
-                            return ( <
-                                CustomPropertiesWrapper >
-                                <
-                                h1 class = "titulo" > Jogo da Velha < /h1>   <
-                                h2 class = "is-size-4" > Jogador: { player } < /h2> { array } < p > < /p > <
-                                button onClick = {
+                            return (
+                                <CustomPropertiesWrapper >
+                                
+                                <h1 class = "titulo" > Jogo da Velha </h1>   <h2 class = "is-size-4" > Jogador: { player } </h2> { array } <p> </p> 
+                                <button onClick = {
                                     () => limpar_historico()
-                                } > { limpar } < /button> <br></br > < p > < /p> { retornar } < p > < /p > <
-                                /CustomPropertiesWrapper>
+                                } > { limpar } </button> <br></br> <p> </p> { retornar } <p> </p> 
+                                </CustomPropertiesWrapper>
                             );
                         } else {
-                            return ( <
-                                CustomPropertiesWrapper >
-                                <
-                                h1 class = "titulo" > Jogo da Velha < /h1>   <
-                                h1 class = "is-size-4" > Vencedor: { vencedor(board) } < /h1> < /
-                                CustomPropertiesWrapper >
+                            return ( <CustomPropertiesWrapper >
+                                <h1 class = "titulo" > Jogo da Velha </h1>   <h1 class = "is-size-4" > Vencedor: { vencedor(board) } </h1> 
+                                </CustomPropertiesWrapper>
                             );
                         }
                     };
                     ReactDOM.render( < App / > , document.getElementById("root"));
-=======
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -132,8 +120,3 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
->>>>>>> 915bf76de8534d527d9fdb98bb16d8e5fac5cffc
