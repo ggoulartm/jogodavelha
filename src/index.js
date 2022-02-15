@@ -43,7 +43,7 @@ const App = () => {
         });
 
         function botao(n) {
-            if (historico[n] == " ") {
+            if (historico[n] === " ") {
                 historia[jogadas] = n;
                 historico[n] = player;
                 setPlayer(nextplayer(player));
@@ -59,9 +59,9 @@ const App = () => {
                 historia[j] = null;
             }
             setBoard(historico);
-            if (jogo % 2 == 0) { setPlayer('X'); } else { setPlayer('O') }
+            if (jogo % 2 === 0) { setPlayer('X'); } else { setPlayer('O') }
             setjogadas(jogo);
-            if (jogo == 0) { limpar = 'Alternar Jogador' }
+            if (jogo === 0) { limpar = 'Alternar Jogador' }
         }
 
         function limpar_historico() {
@@ -76,11 +76,9 @@ const App = () => {
         let retornar = [];
         if (jogadas > 0) {
             retornar = [ <h3 class = "is-size-4" > Historico: </h3>]
-                for (var j = 0; j < jogadas; j++) {
-                    let jogo = j;
-                    retornar = [retornar, <button onClick = {
-                        () => retornar_jogada(jogadas, jogo, historia)
-                    } > Retornar jogada# { j } </button>, <br></br> ]
+                for (var k = 0; k < jogadas; k++) {
+                    let jogo = k;
+                    retornar = [retornar, <button onClick = {() => retornar_jogada(jogadas, jogo, historia)}> Retornar jogada# { k } </button>, <br></br> ]
                 }
             }
 
@@ -113,10 +111,6 @@ const App = () => {
                     };
                     ReactDOM.render( < App / > , document.getElementById("root"));
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+
+
 
