@@ -62,6 +62,29 @@ const App = () => {
       if(jogo == 0){limpar = 'Alternar Jogador'}
     }
 
+        function botao(n) {
+            if (historico[n] === " ") {
+                historia[jogadas] = n;
+                historico[n] = player;
+                setPlayer(nextplayer(player));
+                setBoard(historico);
+                setjogadas(jogadas + 1);
+                limpar = 'Reiniciar Jogo'
+            }
+        }
+
+        function retornar_jogada(jogadas, jogo, historia) {
+            for (var j = jogo; j <= jogadas; j++) {
+                historico[historia[j]] = " ";
+                historia[j] = null;
+            }
+            setBoard(historico);
+            if (jogo % 2 === 0) { setPlayer('X'); } else { setPlayer('O') }
+            setjogadas(jogo);
+            if (jogo === 0) { limpar = 'Alternar Jogador' }
+        }
+
+
     function limpar_historico(){
       historico = Array(9).fill(" ");
       historia = Array(9).fill(null)
@@ -70,6 +93,7 @@ const App = () => {
       setjogadas(0);
       limpar = 'Alternar Jogador'
     }
+
 
   let retornar = [];
   if(jogadas > 0){
@@ -104,4 +128,4 @@ return (
     </CustomPropertiesWrapper>
   );}
 };
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render( < App / > , document.getElementById("root"));
