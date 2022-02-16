@@ -1,5 +1,4 @@
 body {
-<<<<<<< HEAD
   height: 100vh;
   margin: 0;
   display: grid;
@@ -24,17 +23,3 @@ body {
     color: rgb(156, 255, 136);
     font-size: 30px;
   }
-=======
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
->>>>>>> 915bf76de8534d527d9fdb98bb16d8e5fac5cffc
